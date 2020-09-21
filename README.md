@@ -2,7 +2,7 @@
 
 Create a list of National Parks you want to visit.  Explore everything each park has to offer: photos, operating hours, contact information, accessibility, activities, current weather and much more.
 
-This is the backend for `nationalparklist`.  A live version of the app can be found at DEAD LINKS [https://](https://)
+This is the backend for `nationalparklist`.  A live version of the app can be found at DEAD LINKS [https://nationalparklist-client.vercel.app/](https://nationalparklist-client.vercel.app/)
 
 The front end client can be found at DEAD LINKS: [https://github.com/nelsandersoncreative/nationalparklist-client](https://github.com/nelsandersoncreative/nationalparklist-client).
 
@@ -44,9 +44,9 @@ To get setup locally, do the following:
 
 2. Create the dev and test databases: 
 
-`createdb -U postgres -d nationalparkapp`
+`createdb -U postgres -d nationalparkdb`
 and 
-`createdb -U postgres -d nationalparkapp-test`
+`createdb -U postgres -d nationalparkdb-test`
 
 
 3. Create a `.env` and a `.env.test` file in the project root
@@ -55,17 +55,10 @@ Inside the `.env` files you'll need the following:
 
 ````
 
-NODE_ENV=development
-PORT=8000
-
-MIGRATION_DB_HOST=localhost
-MIGRATION_DB_PORT=5432
-MIGRATION_DB_NAME=nationalparkapp
-MIGRATION_DB_USER=postgres
-DEV_DATABASE_URL="postgresql://postgres@localhost/nationalparkapp"
-
-JWT_SECRET=<your-secret-here>
-JWT_EXPIRY='1w'
+DEV_DATABASE_URL=postgresql://postgres@localhost/nationalparkdb
+JWT_SECRET=secret
+JWT_EXPIRY=1w
+PORT=9000
 
 ````
 

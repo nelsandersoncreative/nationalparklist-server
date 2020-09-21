@@ -40,7 +40,7 @@ describe("Auth Endpoints", function () {
           .post("/api/auth/login")
           .set("Content-Type", "application/json")
           .send(requestBody)
-          .expect(400, { message: "username, email and password required" });
+          .expect(400, { message: "email and password required" });
       });
     });
 
@@ -55,7 +55,7 @@ describe("Auth Endpoints", function () {
         .post("/api/auth/login")
         .set("Content-Type", "application/json")
         .send(requestBody)
-        .expect(401, { message: "invalid username, email or password" });
+        .expect(401, { message: "invalid email or password" });
     });
 
     it("return 401 when invalid password", () => {
@@ -69,7 +69,7 @@ describe("Auth Endpoints", function () {
         .post("/api/auth/login")
         .set("Content-Type", "application/json")
         .send(requestBody)
-        .expect(401, { message: "invalid username, email or password" });
+        .expect(401, { message: "invalid email or password" });
     });
 
     it("return 200, authToken and user when successful", async () => {
