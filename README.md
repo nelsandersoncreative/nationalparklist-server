@@ -10,9 +10,11 @@ The front end client can be found at DEAD LINKS: [https://github.com/nelsanderso
 
 If you'd like to learn more about National Parks, discover parks you hadn't heard about or just want to see what parks offer activities that you like, you have come to the right place. With this app you will be able to explore parks, save the ones you like in a list and refer to them whenever you'd like.
 
-## Quick App Demo
+## Screenshots
 
-// ADD imgur LINK
+| Home       | About       | Search     | Parks       |
+|------------|-------------|------------|-------------|
+| <img src="/assets/home.png" width="250"> | <img src="/assets/about.png" width="250"> | <img src="/assets/search.png" width="250"> | <img src="/assets/parks.png" width="250"> |
 
 ## Technology
 
@@ -42,11 +44,11 @@ To get setup locally, do the following:
 1. Clone this repository to your machine, `cd` into the directory and run `npm install`
 
 
-2. Create the dev and test databases: 
+2. Running the app will automatically create a dev database.  The migration is handled in src > helpers > createTables.js and the migration is called in server.js.
 
-`createdb -U postgres -d nationalparkdb`
-and 
-`createdb -U postgres -d nationalparkdb-test`
+3. Create the test database: 
+
+`createdb -U postgres -d nationalparkapp-test`
 
 
 3. Create a `.env` and a `.env.test` file in the project root
@@ -62,7 +64,7 @@ PORT=9000
 
 ````
 
-Your `.env.test` will be the same except your database url will be called `TEST_DATABASE_URL`. The TEST_DATABASE_URL and MIGRATION_DB_NAME will have "test" appended to it.  Here is what env.test will look like respectively:
+Your `.env.test` will be slightly different.  Here is what env.test will look like:
 
 ````
 NODE_ENV=test
@@ -79,12 +81,7 @@ JWT_EXPIRY='1w'
 
 ````
 
-4. Run the migrations for dev - `npm run migrate`
-5. Run the migrations for test - `NODE_ENV=test npm run migrate`
-6. Seed the database for dev
-
-* `psql -U <db-user> -d nationalparkapp -f ./seeds/seed.sample-user.sql`
-* `psql -U <db-user> -d nationalparkapp -f ./seeds/seed.sample-user-parks-list.sql`
+4. 
 
 Now, run those two seed commands above again for the test database as well.
 
