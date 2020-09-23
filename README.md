@@ -48,10 +48,10 @@ To get setup locally, do the following:
 
 3. Create the test database: 
 
-`createdb -U postgres -d nationalparkapp-test`
+`createdb -U postgres -d nationalparkapp-test`  
 
 
-3. Create a `.env` and a `.env.test` file in the project root
+4. Create a `.env` and a `.env.test` file in the project root
 
 Inside the `.env` files you'll need the following:
 
@@ -81,9 +81,10 @@ JWT_EXPIRY='1w'
 
 ````
 
-4. 
+4. Now, run these two seed scripts for the test database:
 
-Now, run those two seed commands above again for the test database as well.
+* psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user.sql
+* psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user-parks-list.sql
 
 7. Run the tests - `npm test`
 8. Start the app - `npm run dev`
