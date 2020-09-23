@@ -2,9 +2,9 @@
 
 Create a list of National Parks you want to visit.  Explore everything each park has to offer: photos, operating hours, contact information, accessibility, activities, current weather and much more.
 
-This is the backend for `nationalparklist`.  A live version of the app can be found at DEAD LINKS [https://nationalparklist-client.vercel.app/](https://nationalparklist-client.vercel.app/)
+This is the backend for `nationalparklist`.  A live version of the app can be found at [https://nationalparklist-client.vercel.app/](https://nationalparklist-client.vercel.app/)
 
-The front end client can be found at DEAD LINKS: [https://github.com/nelsandersoncreative/nationalparklist-client](https://github.com/nelsandersoncreative/nationalparklist-client).
+The front end client can be found at: [https://github.com/nelsandersoncreative/nationalparklist-client](https://github.com/nelsandersoncreative/nationalparklist-client).
 
 ## Introduction
 
