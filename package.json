@@ -1,7 +1,7 @@
 {
   "name": "national-park",
   "version": "1.0.0",
-  "description": "Server for National park",
+  "description": "Server for National Park List",
   "main": "server.js",
   "directories": {
     "test": "test"
@@ -30,6 +30,6 @@
     "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
   },
-  "author": "",
+  "author": "Nels Anderson Creative",
   "license": "ISC"
 }
