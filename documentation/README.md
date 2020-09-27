@@ -94,8 +94,8 @@ JWT_EXPIRY='1w'
 
 Open endpoints require no Authentication.
 
-* [Login](login.md) : `POST /api/auth/login`
-* [Register](register.md) : `POST api/users/register`
+* [Login](auth/login.md) : `POST /api/auth/login`
+* [Register](auth/register.md) : `POST api/users/register`
 
 ## Endpoints that require Authentication
 
