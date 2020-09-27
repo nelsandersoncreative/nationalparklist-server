@@ -22,14 +22,7 @@ const UserParksService = {
       .then((rows) => {
         return rows[0];
       });
-  },
-
-  // getById(knex, id) {
-  //   return knex.from("user_parks").select("*").where("id", id).first();
-  // },
-  // deletePark(knex, id) {
-  //   return knex("user_parks").where({ id }).delete();
-  // }
+  }
 };
 
 module.exports = UserParksService;

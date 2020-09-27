@@ -88,3 +88,26 @@ JWT_EXPIRY='1w'
 
 7. Run the tests - `npm test`
 8. Start the app - `npm run dev`
+
+
+## Open Endpoints
+
+Open endpoints require no Authentication.
+
+* [Login](login.md) : `POST /api/auth/login`
+* [Register](register.md) : `POST api/users/register`
+
+## Endpoints that require Authentication
+
+Closed endpoints require a valid Token to be included in the header of the
+request. A Token can be acquired from the Login view above.
+
+### Current User related
+
+Each endpoint manipulates or displays information related to the User whose
+Token is provided with the request:
+
+* [Get user's park list](current-user/get-parks.md) : `GET /api/user-parks/:id`
+* [Add park to user's park list](current-user/put-add-park.md) : `PUT api/user-parks/add-park/:id`
+* [Remove park from user's park list](current-user/put-remove-park.md) : `PUT api/user-parks/remove-park/:id`
+* [Delete An Account](current-user/delete.md) : `DELETE <api-endpoint>/api/auth/:id`
