@@ -83,9 +83,11 @@ JWT_EXPIRY='1w'
 
 4. Now, run these two seed scripts for the test database:
 
-* psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user.sql
-* psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user-parks-list.sql
+````
+psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user.sql
+psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user-parks-list.sql
 
+````
 7. Run the tests - `npm test`
 8. Start the app - `npm run dev`
 
