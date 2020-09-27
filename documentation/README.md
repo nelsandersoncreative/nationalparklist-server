@@ -10,6 +10,10 @@ The front end client can be found at: [https://github.com/nelsandersoncreative/n
 
 If you'd like to learn more about National Parks, discover parks you hadn't heard about or just want to see what parks offer activities that you like, you have come to the right place. With this app you will be able to explore parks, save the ones you like in a list and refer to them whenever you'd like.
 
+## What does this API do?
+
+This API handles requests made by the front end client `nationalparklist`.  It handles login requests, registration requests and requests relating to maintaining user park lists.  It stores user login and user-related park information in a PostgreSQL database.
+
 ## Screenshots
 
 | Home       | About       | Search     | Parks       |
