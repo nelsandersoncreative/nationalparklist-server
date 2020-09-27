@@ -22,7 +22,7 @@ server.
 ```json
 [
     {
-        "parks": ["park-1", "park-1"]
+        "parks": ["park-1", "park-2"]
     }
 ]
 ```
