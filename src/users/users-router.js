@@ -5,7 +5,7 @@ const { requireAuth } = require("../middleware/jwt-auth");
 const AuthService = require("../auth/auth-service");
 const UserService = require("./user-service");
 
-// usersRouter
+
 usersRouter
   .route("/register")
 

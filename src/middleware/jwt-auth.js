@@ -1,5 +1,6 @@
 const AuthService = require("../auth/auth-service");
 
+// check user authToken and user email to see if it's in database
 const requireAuth = async (req, res, next) => {
   const authToken = req.get("Authorization") || "";
   let token;

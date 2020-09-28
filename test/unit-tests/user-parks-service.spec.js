@@ -3,7 +3,7 @@ const helpers = require("../test-helpers");
 const UserParksService = require("../../src/userParks/userParks-service");
 const knex = require("knex");
 
-// Testing User Parks Service
+// Generate database/table data for testing User Parks service functions
 describe("UserParksService", () => {
   let db;
   const testUsers = helpers.testUsers();
@@ -22,6 +22,7 @@ describe("UserParksService", () => {
   afterEach("clean db", () => helpers.cleanTables(db));
 
   describe("findCurrentByUserId", () => {
+    
     // 1. when no parks list exists for a user --> it should return an array with a length of 0
     context("when no parks exist for a user", () => {
       it("returns an array with a length of zero", async () => {

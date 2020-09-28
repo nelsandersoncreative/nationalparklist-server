@@ -1,3 +1,4 @@
+// Helper functions relating to user park data for communicating with PostgreSQL database
 const UserParksService = {
   getUserParks(knex, user_id) {
     return knex("user_parks").select("parks").where({

@@ -19,10 +19,12 @@ app.use(express.json());
 
 app.use(cors());
 
+// displays if app running
 app.get("/", (req, res) => {
-  res.send("app running...")
+  res.send("National Park List server is running...")
 })
 
+// endpoints ... routing to respective routers.  The functions for each route use corresponding helper functions found in "services" files
 app.use('/api/auth', authRouter);
 app.use('/api/user-parks', userParksRouter);
 app.use('/api/users', usersRouter);

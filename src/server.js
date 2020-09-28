@@ -12,6 +12,7 @@ const db = knex({
 
 app.set("db", db);
 
+// check if tables exist, if they don't run migrations
 createTables(db);
 
 app.listen(PORT, () => {

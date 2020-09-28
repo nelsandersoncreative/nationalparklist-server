@@ -8,6 +8,7 @@ const supertest = require("supertest");
 const { expect } = require("chai");
 require("../setup");
 
+//generate database/table data for tests
 describe("User Parks Endpoints", () => {
   let db;
   let testUsers = helpers.testUsers();
@@ -26,9 +27,9 @@ describe("User Parks Endpoints", () => {
   after("close db connection", () => db.destroy());
   beforeEach("seed users", () => helpers.createUsers(db, testUsers));
 
-  // TEST #1 GET User Parks List
-
+  // TEST SUITE #1 GET User Parks List
   describe("GET /api/user-parks/:user_id", () => {
+
     //if user has no parks in parks list yet
     it("successfully creates and then retrieves a user park list when user previously had no park list", async () => {
       return supertest(app)
@@ -47,9 +48,10 @@ describe("User Parks Endpoints", () => {
     });
   });
 
-  // TEST #2. PUT Add a new park to new parks list
-
+  // TEST SUITE #2 PUT Add a new park to new parks list
   describe("PUT /api/user-parks/add-park/:park", () => {
+
+    // initialize a park list if one isn't yet created
     it("when no park list is found, initialize a parklist", () => {
       return supertest(app)
         .put("/api/user-parks/1")
@@ -65,6 +67,7 @@ describe("User Parks Endpoints", () => {
         });
     });
 
+    // return 201 when user adds park to their list
     it("returns 201 created when park is added to park list", () => {
       return supertest(app)
         .put("/api/user-parks/fopo")
@@ -94,8 +97,9 @@ describe("User Parks Endpoints", () => {
     });
   });
 
-  // TEST #3. PUT remove existing park from parks list
+  // TEST SUITE #3. PUT remove existing park from parks list
   describe("PUT /api/user-parks/remove-park/:park", () => {
+    // return 201 when user remove's park from their list
     it("returns 201 when a park is removed from the parklist", () => {
       return supertest(app)
         .put("/api/user-parks/remove-park/fopo")

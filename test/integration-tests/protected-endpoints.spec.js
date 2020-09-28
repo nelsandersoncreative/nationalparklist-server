@@ -3,6 +3,7 @@ const knex = require("knex");
 const app = require("../../src/app");
 const helpers = require("./../test-helpers");
 
+// generate database/table data for protected enpdpoints
 describe("Protected Endpoints", function () {
   let db;
   let testUsers = helpers.testUsers();
@@ -21,6 +22,8 @@ describe("Protected Endpoints", function () {
 
   beforeEach("seed users", () => helpers.createUsers(db, testUsers));
 
+  // test each protected endpoint relating to unique user park data
+  // getting user parklist & adding/deleting parks from user parklist
   const protectedEndpoints = [
     {
       name: "GET /api/user-parks/:user_id",
@@ -41,6 +44,7 @@ describe("Protected Endpoints", function () {
 
   protectedEndpoints.forEach((endpoint) => {
     describe(endpoint.name, () => {
+
       // if there is no bearer token --> throw an error
       it('returns 401 "Missing bearer token" if no token provided', () => {
         return endpoint
