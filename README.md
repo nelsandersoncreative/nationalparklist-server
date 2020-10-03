@@ -100,8 +100,8 @@ psql -U <db-user> -d nationalparkapp-test -f ./seeds/seed.sample-user-parks-list
 
 Open endpoints require no Authentication.
 
-* [Login](auth/login.md) : `POST /api/auth/login`
-* [Register](auth/register.md) : `POST api/users/register`
+* [Login](documentation/auth/login.md) : `POST /api/auth/login`
+* [Register](documentation/auth/register.md) : `POST api/users/register`
 
 ## Endpoints that require Authentication
 
@@ -113,7 +113,7 @@ request. A Token can be acquired from the Login view above.
 Each endpoint manipulates or displays information related to the User whose
 Token is provided with the request:
 
-* [Get user's park list](current-user/get-parks.md) : `GET /api/user-parks/:id`
-* [Add park to user's park list](current-user/put-add-park.md) : `PUT api/user-parks/add-park/:id`
-* [Remove park from user's park list](current-user/put-remove-park.md) : `PUT api/user-parks/remove-park/:id`
-* [Delete An Account](current-user/delete.md) : `DELETE /api/auth/:id`
+* [Get user's park list](documentation/current-user/get-parks.md) : `GET /api/user-parks/:id`
+* [Add park to user's park list](documentation/current-user/put-add-park.md) : `PUT api/user-parks/add-park/:id`
+* [Remove park from user's park list](documentation/current-user/put-remove-park.md) : `PUT api/user-parks/remove-park/:id`
+* [Delete An Account](documentation/current-user/delete.md) : `DELETE /api/auth/:id`
