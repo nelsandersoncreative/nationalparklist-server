@@ -1,3 +1,5 @@
+[Back to README.md](../../README.md)
+
 # Add Park To User Parks List
 
 Allow the Authenticated User to add a park to their user parks list.
@@ -46,3 +48,5 @@ User with `id` of `1` adds a park with park code `fopo` to their parks list.
 ## Notes
 
 * The user has no control over the endpoints/requests made here, they all happen within the app so the error handling is minimal and will respond with "500 internal server error" if an error were to happen.
+
+[Back to README.md](../../README.md)

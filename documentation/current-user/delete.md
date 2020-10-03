@@ -1,3 +1,5 @@
+[Back to README.md](../../README.md)
+
 # Delete User's Account
 
 Delete the Account and associated park list of an Authenticated User.
@@ -42,3 +44,5 @@ Delete the Account and associated park list of an Authenticated User.
 ## Notes
 
 * Will remove user parks list for this account in addition to removing the account.
+
+[Back to README.md](../../README.md)

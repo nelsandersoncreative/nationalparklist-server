@@ -1,3 +1,5 @@
+[Back to README.md](../../README.md)
+
 # Get User Parks List
 
 Show user parks list for the current user.
@@ -58,3 +60,5 @@ There are security issues:
     but that they do not have access to.
 * Account IDs are sequential so an authorized user can count all the Accounts
     on the system.
+
+[Back to README.md](../../README.md)
